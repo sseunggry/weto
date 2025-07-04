@@ -2,3 +2,4 @@ dist
 node_modules
 design
 .idea
+.DS_Store

@@ -2,8 +2,16 @@
 @import "../util";
 
 /* layout */
+body{background-color: #141435; color: #fff;}
 // .wrap{}
 // .contents{}
+
+.inner{margin: 0 auto; padding: 0 20px; max-width: calc(1280px + 40px);}
+
+
+
+
+
 
 
 @media (max-width: 1440px) {

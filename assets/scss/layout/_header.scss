@@ -2,4 +2,11 @@
 @import "../util";
 
 /* header */
- 
+.header{}
+.header .inner{display: flex; align-items: center; height: 60px; }
+.header .logo{margin-right: 48px; width: 97px; height: 26px; @include bg('content/logo.svg');}
+.header .nav{display: flex;}
+.header .nav li{font-size: 14px; font-weight: 700;}
+.header .nav li + li{margin-left: 30px; }
+.header .lang{margin-left: auto;}
+.header .lang .select{}

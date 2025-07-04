@@ -1,5 +1,26 @@
 @charset "UTF-8";
 @import "./util";
 @import "./base/";
-@import "./component";
 @import "./layout";
+
+.sec-tit .tit{font-size: 42px; font-weight: 700; text-align: center;}
+
+.sec-kv{height: 830px; @include bg('content/visual_ko.png', $size: auto 100%);}
+.sec-kv .inner{display: flex; align-items: center; justify-content: center; height: 100%;}
+.sec-kv .txt-box{margin-top: 120px; margin-left: 90px; text-align: center;}
+.sec-kv .txt-box .txt-wrap .tit{font-size: 54px;}
+.sec-kv .txt-box .txt-wrap .tit strong{font-weight: 700;}
+.sec-kv .txt-box .txt-wrap .desc{margin-top: 40px; font-size: 24px;}
+.sec-kv .txt-box .btn-wrap{display: flex; justify-content: center; margin-top: 40px;}
+.sec-kv .txt-box .btn-wrap .btn{display: flex; align-items: center; justify-content: center; width: 150px; height: 50px; font-size: 16px; font-weight: 700; border-radius: 30px;}
+.sec-kv .txt-box .btn-wrap .btn.primary{background-color: #216EF3;}
+.sec-kv .txt-box .btn-wrap .btn.line{border: 1px solid #fff;}
+.sec-kv .txt-box .btn-wrap .btn + .btn{margin-left: 14px;}
+
+.sec-01{position: relative; padding: 60px 0; min-height: 400px;}
+.sec-01 .sub-tit{margin-bottom: 8px; font-size: 16px; line-height: 2; color: #216EF3;}
+.sec-01 .tit{font-size: 42px; font-weight: 700;}
+.sec-01 .desc{margin-top: 40px;}
+.sec-01 .img-wrap{position: absolute; top: 0; right: 80px; width: 835px;}
+
+.sec-02{padding: 126px 0 151px;}
