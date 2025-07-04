@@ -1,0 +1,11 @@
+@charset "UTF-8";
+@import "../util";
+
+$fonts-style-ko: (Thin: 100, ExtraLight: 200, Light: 300, Regular: 400, Medium: 500, SemiBold: 600, Bold: 700, ExtraBold: 800, Black: 900);
+
+@each $font, $weight in $fonts-style-ko{
+    @font-face{
+        @include font(#{$font-ko}, '#{$font-ko}-#{$font}', 'woff', #{$weight});
+        font-style: normal;
+    }
+}

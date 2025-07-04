@@ -1,0 +1,12 @@
+@charset "UTF-8";
+@import "../util";
+
+/* animation */
+[data-aos^="fade-"]{
+    &.aos-init{
+        &.aos-animate{
+            transition-duration: .6s;
+            transition-timing-function: ease-in-out;
+        }
+    }
+}

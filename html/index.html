@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>worksheet</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-size: 14px;
+                line-height: 1.5;
+                font-family: inherit;
+                background-color: #fff;
+            }
+            #wrap {
+                padding-top: 50px;
+            }
+            table {
+                width: calc(100% - 50px);
+                margin: 0 25px 60px;
+                border-top: 2px solid #ddd;
+                border-collapse: collapse;
+            }
+            th,
+            td {
+                border-bottom: 1px solid #eee;
+                border-right: 1px solid #eee;
+                vertical-align: top;
+                padding: 6px 12px 5px;
+            }
+            th {
+                background-color: #f8f8f8;
+            }
+            th:last-child,
+            td:last-child {
+                border-right-width: 0;
+            }
+            td em {
+                font-weight: bold;
+            }
+            td a {
+                color: #000;
+                text-decoration: underline;
+            }
+            tr:hover td {
+                background-color: #f4f7fc;
+            }
+            tr.color {
+                background-color: #f4f7fc;
+            }
+            table .bg-gray {
+                background-color: #eee;
+                color: #999;
+            }
+            table .bg-gray a {
+                color: #999;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="wrap">
+            <table>
+                <colgroup>
+                    <col style="width: 10%">
+                    <col style="width: 15%">
+                    <col style="width: 25%">
+                    <col style="width: 7%">
+                    <col style="width: 25%">
+                    <col style="width: auto">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Dpeth 1</th>
+                        <th>Dpeth 2</th>
+                        <th>화면명</th>
+                        <th>화면유형</th>
+                        <th>URL</th>
+                        <th>Notice</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>메인</td>
+                        <td>홈</td>
+                        <td>홈</td>
+                        <td>Page</td>
+                        <td><a target="_blank" href="./main/main_01.html">main_01</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>로그인 팝업-1</td>
+                        <td>Popup</td>
+                        <td><a target="_blank" href="./main/main_pop_01.html">main_pop_01</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>로그인 팝업-2</td>
+                        <td>Popup</td>
+                        <td><a target="_blank" href="./main/main_pop_02.html">main_pop_02</a></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>shop</td>
+                        <td>리스트</td>
+                        <td></td>
+                        <td>Page</td>
+                        <td><a target="_blank" href="./shop/shop_01.html">shop_01</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>베이직</td>
+                        <td></td>
+                        <td>Page</td>
+                        <td><a target="_blank" href="./shop/shop_02.html">shop_02</a></td>
+                        <td>2025-06-04 클래스 수정</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>프리미엄</td>
+                        <td></td>
+                        <td>Page</td>
+                        <td><a target="_blank" href="./shop/shop_03.html">shop_03</a></td>
+                        <td></td>
+                    </tr>
+
+
+                    <tr>
+                        <td>휴대폰 인증</td>
+                        <td>휴대폰 번호로 시작</td>
+                        <td>이름 입력</td>
+                        <td>Page</td>
+                        <td><a target="_blank" href="./auth/auth_01.html">auth_01</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>주민등록번호 입력</td>
+                        <td>Page</td>
+                        <td><a target="_blank" href="./auth/auth_02.html">auth_02</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>통신사 선택</td>
+                        <td>Page</td>
+                        <td><a target="_blank" href="./auth/auth_03.html">auth_03</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>휴대폰 번호 입력-1</td>
+                        <td>Page</td>
+                        <td><a target="_blank" href="./auth/auth_04.html">auth_04</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>휴대폰 번호 입력-2</td>
+                        <td>Page</td>
+                        <td><a target="_blank" href="./auth/auth_05.html">auth_05</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>휴대폰 번호 입력-3</td>
+                        <td>Page</td>
+                        <td><a target="_blank" href="./auth/auth_06.html">auth_06</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>회원가입 완료</td>
+                        <td>Page</td>
+                        <td><a target="_blank" href="./auth/auth_07.html">auth_07</a></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>사전 문진</td>
+                        <td>사전 문진</td>
+                        <td>step-1</td>
+                        <td>Page</td>
+                        <td><a target="_blank" href="./interview/interview_01.html">interview_01</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>step-2</td>
+                        <td>Page</td>
+                        <td><a target="_blank" href="./interview/interview_02.html">interview_02</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>step-3</td>
+                        <td>Page</td>
+                        <td><a target="_blank" href="./interview/interview_03.html">interview_03</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>제출 완료</td>
+                        <td>Page</td>
+                        <td><a target="_blank" href="./interview/interview_04.html">interview_04</a></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>마이페이지</td>
+                        <td>마이페이지</td>
+                        <td></td>
+                        <td>Page</td>
+                        <td><a target="_blank" href="./mypage/mypage_01.html">mypage_01</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>주문상세내역</td>
+                        <td></td>
+                        <td>Page</td>
+                        <td><a target="_blank" href="./mypage/mypage_02.html">mypage_02</a></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>결제하기</td>
+                        <td>결제하기</td>
+                        <td>모든 경우</td>
+                        <td>Page</td>
+                        <td><a target="_blank" href="./pay/pay_00.html">pay_00</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>기본</td>
+                        <td>Page</td>
+                        <td><a target="_blank" href="./pay/pay_01.html">pay_01</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>주문자정보, 배송정보-배송지선택 수정하기</td>
+                        <td>Page</td>
+                        <td><a target="_blank" href="./pay/pay_02.html">pay_02</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>배송정보-신규입력</td>
+                        <td>Page</td>
+                        <td><a target="_blank" href="./pay/pay_03.html">pay_03</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>주문완료</td>
+                        <td>Page</td>
+                        <td><a target="_blank" href="./pay/pay_04.html">pay_04</a></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>장바구니</td>
+                        <td>장바구니</td>
+                        <td></td>
+                        <td>Page</td>
+                        <td><a target="_blank" href="./cart/cart_01.html">cart_01</a></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

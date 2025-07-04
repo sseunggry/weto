@@ -1,0 +1,32 @@
+@charset "UTF-8";
+@import "../util";
+
+/* progress */
+.progress{
+    display: flex;
+    gap: 0.6rem;
+    margin: 0.4rem 0;
+
+    .bar{
+        width: 100%;
+        height: 0.6rem;
+        border-radius: 100rem;
+        background-color: #EDEDED;
+
+        &.active{
+            background-color: var(--color-yellow-3);;    
+        }        
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .progress{
+        gap: 1.67vw;
+        margin: 1.11vw 0;
+
+        .bar{
+            height: 1.67vw;
+            border-radius: 277.78vw;   
+        }
+    }
+}

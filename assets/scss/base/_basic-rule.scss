@@ -1,0 +1,95 @@
+@charset "UTF-8";
+@import "../util";
+
+//default
+html{
+    font-size: $body-fz;
+    font-weight: 400;
+    line-height: $line-height;
+    color: $base-color;
+
+    &[lang="ko-KR"], &[lang="ko"]{
+        font-family: $font-family-ko;
+    }
+}
+
+/* font */
+$tit-fz: (xxl: 56, xl: 48, l: 46, m: 40, s: 34, xs: 32, xxs: 24);
+$txt-fz: (l: 24, m: 20, s: 18, xs: 16);
+
+.tit{
+    @each $size, $font in $tit-fz {
+        &-#{$size}{
+            font-size: #{$font}px;
+        }
+    }
+} 
+.txt{
+    @each $size, $font in $txt-fz {
+        &-#{$size}{
+            font-size: #{$font}px;
+        }
+    }
+}
+
+/* blind */
+.blind {
+    @include blind();
+}
+
+/* space */
+$position: (t:top, b:bottom, r:right, l: left);
+$total: 10;
+@each $abbr, $pos in $position {
+  @for $i from 0 to $total {
+    .m#{$abbr}-#{$i} {margin-#{$pos}: $i*1rem !important;}
+    .p#{$abbr}-#{$i} {padding-#{$pos}: $i*1rem !important;}
+  }
+}
+
+@media screen and (max-width: 360px) {
+    @each $abbr, $pos in $position {
+      @for $i from 0 to $total {
+        .m#{$abbr}-#{$i} {margin-#{$pos}: $i*2.78vw !important;}
+        .p#{$abbr}-#{$i} {padding-#{$pos}: $i*2.78vw !important;}
+      }
+    }
+}
+
+/* font-style */
+.fw-normal{font-weight: 400 !important;}
+.fw-medium{font-weight: 500 !important;}
+.fw-bold{font-weight: 700 !important;}
+
+/* common */
+img{width: 100%;}
+.txt-al-center{text-align: center !important;}
+.txt-al-left{text-align: left !important;}
+.txt-al-right{text-align: right !important;}
+
+.pc-only{display: flex !important;}
+.mob-only{display: none !important;}
+
+.flex{display: flex;}
+.flex-end{@include flex('', 'flex-end !important');}
+.flex-center{@include flex('', 'center !important');}
+.flex-start{@include flex('', 'flex-start !important');}
+
+.bold{font-weight: 700 !important;}
+
+
+@media all and (max-width:720px){
+    .pc_only{display: none;}
+    .mo_only{display: block;}
+  
+      /* space */
+      $position: (t:top, b:bottom, r:right, l: left);
+      $total: 10;
+  
+      @each $abbr, $pos in $position {
+        @for $i from 0 to $total {
+            .m#{$abbr}-#{$i} {margin-#{$pos}: $i*1.39vw !important;}
+            .p#{$abbr}-#{$i} {padding-#{$pos}: $i*1.39vw !important;}
+        }
+      }
+  }

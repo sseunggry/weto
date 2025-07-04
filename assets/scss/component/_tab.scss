@@ -1,0 +1,60 @@
+@charset "UTF-8";
+@import "../util";
+
+/* tab */
+.tab{
+    .tab-btns{
+        display: inline-flex;
+        padding: 0.4rem;
+        border-radius: 100rem;
+        background-color: var(--color-gray-1);
+
+        .tab-btn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 1.2rem;
+            height: 3.5rem;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--color-gray-6);
+            border-radius: 100rem;
+            
+            &.active{
+                color: var(--color-white);
+                background-color: var(--color-black);
+            }
+        }
+    }
+    .tab-pnls{
+        .tab-pnl{
+            display: none;
+            padding-top: 1.6rem;
+
+            &.show{
+                display: block;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .tab{
+        .tab-btns{
+            padding: 1.11vw;
+            border-radius: 277.78vw;
+    
+            .tab-btn{
+                padding: 0 3.33vw;
+                height: 9.72vw;
+                font-size: 4.17vw;
+                border-radius: 277.78vw;
+            }
+        }
+        .tab-pnls{
+            .tab-pnl{
+                padding-top: 4.44vw;
+            }
+        }
+    }
+}
