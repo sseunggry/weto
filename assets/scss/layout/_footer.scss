@@ -2,4 +2,11 @@
 @import "../util";
 
 /* footer */
+.footer{padding: 40px 0;}
+.footer .logo{margin: 12px 0; width: 97px; height: 26px; @include bg('content/logo.svg', $size: 100% auto);}
+.footer .util-menu{display: flex; gap: 54px;}
 
+.footer .info{display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px;}
+.footer .info li.full{width: 100%;}
+
+.footer .copyright{margin-top: 74px; line-height: 1.7; text-align: center;}

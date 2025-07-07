@@ -67,13 +67,14 @@ img{width: 100%;}
 .txt-al-left{text-align: left !important;}
 .txt-al-right{text-align: right !important;}
 
-.pc-only{display: flex !important;}
+.pc-only{display: block !important;}
 .mob-only{display: none !important;}
 
 .flex{display: flex;}
 .flex-end{@include flex('', 'flex-end !important');}
 .flex-center{@include flex('', 'center !important');}
 .flex-start{@include flex('', 'flex-start !important');}
+.flex-between{@include flex('space-between !important', '');}
 
 .bold{font-weight: 700 !important;}
 

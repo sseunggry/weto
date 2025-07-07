@@ -3,9 +3,79 @@
 @import "./base/";
 @import "./layout";
 
-.sec-tit .tit{font-size: 42px; font-weight: 700; text-align: center;}
+$img-url: "../img/content";
+$ico-url: "../img/icon";
 
-.sec-kv{height: 830px; @include bg('content/visual_ko.png', $size: auto 100%);}
+.sec-tit .tit{margin-bottom: 50px; font-size: 42px; font-weight: 700; text-align: center;}
+
+.notice-list{font-size: 14px;}
+.notice-list > li{position: relative; padding-left: 20px;}
+.notice-list > li::before{content: ''; position: absolute; top: 8px; left: 8px; display: block; width: 4px; height: 4px; border-radius: 50%; background-color: #fff;}
+
+.list-box{display: flex; gap: 20px;}
+.list-box .item{padding: 30px 30px 40px; flex: 1; border-radius: 30px; background: linear-gradient(180deg,rgba(15, 20, 53, 1) 0%, rgba(15, 47, 104, 1) 100%);}
+.list-box .item .img-wrap + .txt-wrap{margin-top: 20px;}
+.list-box .item .num{display: inline-block; margin-bottom: 12px; font-size: 16px; font-weight: 700; color: #216EF3;}
+.list-box .item .tit{font-size: 24px; font-weight: 700;}
+.list-box .item .desc{margin-top: 12px; font-size: 16px;}
+
+.list-box.column{flex-wrap: wrap;}
+.list-box.column .item{width: calc(50% - 10px); flex: none;}
+
+//ico
+[class*="ico-"]::before{content: ''; display: block; background-repeat: no-repeat; background-size: 100% auto; background-position: center;}
+.ico{
+    @for $i from 1 through 4 {
+        $idx : if($i < 10, '0#{$i}', '#{$i}');
+        $name: 'value';
+
+        &-#{$name}#{$idx}::before{
+            margin: 0 auto 20px;
+            width: 112px;
+            height: 112px;
+            background-image: url('#{$ico-url}/ico-#{$name}#{$idx}.png');
+        }
+    }
+
+    @for $i from 1 through 4 {
+        $idx : if($i < 10, '0#{$i}', '#{$i}');
+        $name: 'process';
+
+        &-#{$name}#{$idx}::before{
+            width: 36px;
+            height: 36px;
+            background-image: url('#{$ico-url}/ico-#{$name}#{$idx}.png');
+        }
+    }
+
+    @for $i from 1 through 4 {
+        $idx : if($i < 10, '0#{$i}', '#{$i}');
+        $name: 'feature';
+
+        &-#{$name}#{$idx}::before{
+            margin-bottom: 24px;
+            width: 50px;
+            height: 50px;
+            background-image: url('#{$ico-url}/ico-#{$name}#{$idx}.png');
+        }
+    }
+
+    &-coin{
+        display: block;
+        margin: 0 auto 4px;
+        width: 80px;
+        height: 80px;
+
+        &::before{
+            width: 100%;
+            height: 100%;
+            background-image: url('#{$ico-url}/ico-coin.png');
+        }
+    }
+}
+
+// section
+.sec-kv{height: 830px; @include bg('content/visual-ko.png', $size: auto 100%);}
 .sec-kv .inner{display: flex; align-items: center; justify-content: center; height: 100%;}
 .sec-kv .txt-box{margin-top: 120px; margin-left: 90px; text-align: center;}
 .sec-kv .txt-box .txt-wrap .tit{font-size: 54px;}
@@ -17,10 +87,118 @@
 .sec-kv .txt-box .btn-wrap .btn.line{border: 1px solid #fff;}
 .sec-kv .txt-box .btn-wrap .btn + .btn{margin-left: 14px;}
 
+// My Moment 생태계
 .sec-01{position: relative; padding: 60px 0; min-height: 400px;}
 .sec-01 .sub-tit{margin-bottom: 8px; font-size: 16px; line-height: 2; color: #216EF3;}
 .sec-01 .tit{font-size: 42px; font-weight: 700;}
 .sec-01 .desc{margin-top: 40px;}
-.sec-01 .img-wrap{position: absolute; top: 0; right: 80px; width: 835px;}
+.sec-01 .img-wrap{position: absolute; top: 0; right: 80px; width: 835px; z-index: -1;}
 
-.sec-02{padding: 126px 0 151px;}
+// My Moment의 핵심 가치
+.sec-02{padding: 130px 0 150px;}
+
+// 참여 방식 및 리워드
+.sec-03{padding: 130px 0 150px;}
+.sec-03 .list-box .item .notice-list{margin-top: 20px;}
+
+// 토큰 작동 구조
+.sec-04{padding: 130px 0 140px;}
+.sec-04 .process { display: flex; align-items: center; }
+
+.sec-04 .process .first { }
+.sec-04 .process .second { }
+.sec-04 .process .circle{position: relative; margin: 0 auto;}
+.sec-04 .process .circle::after{content: ''; position: absolute; display: block; border-radius: 50%; z-index: -1;}
+
+.sec-04 .process .first .circle{width: 140px; height: 140px; background-color: #BAD1F8;}
+.sec-04 .process .first .circle .tit{font-size: 18px; color: #216EF3;}
+.sec-04 .process .first .ico-process01::before{width: 32px; height: 32px;}
+.sec-04 .process .second .circle{margin-left: 185px; margin-right: 100px; padding: 42px; width: 256px; height: 256px; background-color: rgba(33, 110, 243, 0.3); border: 1px dotted #1D468B;}
+.sec-04 .process .second .circle::after{width: 67%; height: 67%; background-color: rgba(33, 110, 243, 1);}
+.sec-04 .process .second .circle .tit{padding: 0 30px; word-break: keep-all;}
+.sec-04 .process .second .ico-process02::before{margin-bottom: 3px;}
+.sec-04 .process .third .circle{width: 162px; height: 162px; background-color: #EA882D;}
+.sec-04 .process .third .circle::after{width: 70%; height: 70%;}
+.sec-04 .process .third .box-wrap:nth-child(1) .circle{background-color: rgba(234, 136, 45, 0.3);}
+.sec-04 .process .third .box-wrap:nth-child(1) .circle::after{background-color: rgba(234, 136, 45, 1);}
+.sec-04 .process .third .box-wrap:nth-child(2) .circle{background-color: rgba(53, 204, 156, 0.3);}
+.sec-04 .process .third .box-wrap:nth-child(2) .circle::after{background-color: rgba(53, 204, 156, 1);}
+.sec-04 .process .third .box-wrap + .box-wrap{margin-top: 34px;}
+.sec-04 .process .third .ico-process04::before{margin-bottom: 6px; width: 26px; height: 26px;}
+
+.sec-04 .process .circle{display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 50%;}
+.sec-04 .process .circle .tit{font-size: 16px; font-weight: 700; text-align: center;}
+.sec-04 .process .desc{margin-top: 12px; text-align: center;}
+
+// 토큰의 특징 및 기능
+.sec-05{padding: 60px 0 140px;}
+.sec-05 .banner{position: relative; margin-top: 128px; padding: 40px 40px 68px; font-size: 42px; text-align: center; background: linear-gradient(280deg,rgba(21, 48, 96, 1) 0%, rgba(33, 110, 243, 1) 100%); border-radius: 30px;}
+.sec-05 .banner::after{content: ''; position: absolute; bottom: -100px; right: -10px; width: 190px; height: 190px; @include bg('icon/ico-coin.png', $size: 100% auto);}
+.sec-05 .banner .logo{display: inline-block; margin-bottom: 8px; width: 145px; height: 26px; @include bg('content/logo-mymoment.png', $size: 100% auto);}
+.sec-05 .banner .tit{font-size: 42px;}
+
+
+// 토큰 개요 및 분배
+.sec-06{padding: 130px 0 50px;}
+.sec-06 .table-wrap {padding: 40px 52px; font-size: 18px; background: linear-gradient(180deg,rgba(15, 20, 53, 1) 0%, rgba(15, 47, 104, 1) 100%); border-radius: 30px;}
+.sec-06 .table-wrap .table-tit{margin-bottom: 20px; font-size: 24px; font-weight: 700;}
+.sec-06 .table-wrap .thead { display: flex; }
+.sec-06 .table-wrap .tbody ul { display: flex; }
+.sec-06 .table-wrap .tfoot { display: flex; }
+
+.sec-06 .table-wrap .th{display: flex; align-items: center; flex-shrink: 0; padding: 16px 24px; min-width: 150px; width: 12.58%; font-weight: 700; background-color: #141435; word-break: break-all;}
+.sec-06 .table-wrap .td{display: flex; align-items: center; padding: 16px 24px; width: 100%; background-color: rgba(255, 255, 255, 0.1); border-bottom: 1px solid #141435; border-right: 1px solid #141435; word-break: break-all;}
+.sec-06 .table-wrap .td:last-child{border-right: 0;}
+
+.sec-06 .table-wrap .thead .th{background-color: #122E60;}
+.sec-06 .table-wrap .tfoot .th{background-color: #2F2F4B;}
+
+.sec-06 .table-wrap.table-distribute.pc-only {
+    $tableWidths: 20%, 20%, 19%, 12.5%, 28.5%;
+    $tableFootWidths: 40%, 19%, 12.5%, 28.5%;
+
+    .th{min-width: auto;}
+    .td.small{font-size: 14px;}
+    
+    .thead li, .tbody li {
+        @for $i from 1 through length($tableWidths) {
+            $width: nth($tableWidths, $i);
+            &:nth-child(#{$i}) {
+                width: $width;
+            }
+        }
+    }
+    
+    .tfoot li {
+        @for $i from 1 through length($tableFootWidths) {
+            $width: nth($tableFootWidths, $i);
+            &:nth-child(#{$i}) {
+            width: $width;
+            }
+        }
+    }
+}
+.sec-06 .graph-wrap{position: relative; margin: 75px auto 60px; width: 574px;}
+.sec-06 .graph-wrap .img-list li{position: absolute;}
+.sec-06 .graph-wrap .img-wrap{}
+
+
+
+// Roadmap
+.sec-07{padding: 100px 0 140px;}
+.sec-07 .roadmap-list{position: relative; padding-top: 10px;}
+.sec-07 .roadmap-list::before{content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); display: block; width: 6px; height: 100%; background-color: #216EF3;}
+.sec-07 .roadmap-list .item{position: relative; padding: 24px 30px; margin-top: 40px; width: 46.5%; background-color: #1C2459; border-radius: 8px;}
+.sec-07 .roadmap-list .item:first-child{margin-top: 0;}
+.sec-07 .roadmap-list .item:nth-child(2n){margin-left: auto;}
+.sec-07 .roadmap-list .item::after{content: ''; position: absolute; top: 16px; right: calc(-10%); display: block; width: 28px; height: 28px; border-radius: 50%; border: 5px solid #216EF3; background-color: #141435; box-sizing: border-box;}
+.sec-07 .roadmap-list .item:nth-child(2n)::after{left: calc(-10%); right: initial;}
+.sec-07 .roadmap-list .item .tit{font-size: 28px; font-weight: 700; color: #216EF3;}
+.sec-07 .roadmap-list .item .desc-list{margin-top: 12px; font-size: 16px; line-height: 1.5; word-break: keep-all;}
+.sec-07 .roadmap-list .item .desc-list li{margin-top: 4px;}
+.sec-07 .roadmap-list .item .desc-list li:first-child{margin-top: 0;}
+
+// banner
+.sec-08{padding: 50px 0 120px; background: linear-gradient(0deg,rgba(33, 110, 243, 1) 0%, rgba(15, 20, 53, 0) 100%);}
+.sec-08 .banner{font-size: 42px; text-align: center;}
+.sec-08 .banner::before{content: ''; display: inline-block; margin: 0 auto; width: 190px; height: 190px; @include bg('icon/ico-coin.png', $size: 100% auto);}
