@@ -48,7 +48,7 @@
                             <div class="txt-box">
                                 <div class="txt-wrap">
                                     <h2 class="tit">
-                                        마이모먼트 플랫폼 생태계를 기반 <br />
+                                        마이모먼트 플랫폼 <br class="mo-only"/> 생태계를 기반 <br />
                                         <strong>‘Weto 코인’</strong>
                                     </h2>
                                     <p class="desc">
@@ -69,7 +69,7 @@
                             <div class="txt-wrap">
                                 <p class="sub-tit">My Moment 생태계</p>
                                 <h3 class="tit">
-                                    일상 속 30초, 세상을 바꾸는 힘 <br />
+                                    일상 속 30초, <br class="mo-only" /> 세상을 바꾸는 힘 <br />
                                     My Moment
                                 </h3>
                                 <p class="desc">
@@ -206,19 +206,20 @@
                             <div class="sec-tit">
                                 <h3 class="tit">Weto 토큰 작동 구조</h3>
                             </div>
-                            <ul class="process">
-                                <li class="first">
+                            <!-- 
+                            <div class="process">
+                                <div class="first">
                                     <div class="circle ico-process01">
                                         <p class="tit">사용자 활동</p>
                                     </div>
                                     <p class="desc">사용자는 마이모먼트 플랫폼 내 <br />퀴즈, 광고 시청, 챌린지 등의 활동을 수행</p>
-                                </li>
-                                <li class="second">
+                                </div>
+                                <div class="second">
                                     <div class="circle ico-process02">
                                         <div class="tit"><strong>활동에 따라 리워드 포인트가 생성됨</strong></div>
                                     </div>
-                                </li>
-                                <li class="third">
+                                </div>
+                                <div class="third">
                                     <div class="box-wrap">
                                         <div class="circle ico-process03">
                                             <p class="tit">Weto <br />토큰전환</p>
@@ -236,8 +237,25 @@
                                             유통량 공급 및 과포화 물량 매칭
                                         </p>
                                     </div>
-                                </li>
-                            </ul>
+                                </div>
+                                <div class="line-wrap">
+                                    <div class="line"></div>
+                                    <img src="../assets/img/content/sec04-line.png" alt="" />
+                                </div>
+                            </div>
+                             -->
+                            <div class="process">
+                                <ul class="img-wrap">
+                                    <li class="circle-01"><img src="../assets/img/content/sec04-circle-01.png" alt="" /></li>
+                                    <li class="circle-02"><img src="../assets/img/content/sec04-circle-02.png" alt="" /></li>
+                                    <li class="circle-03"><img src="../assets/img/content/sec04-circle-03.png" alt="" /></li>
+                                    <li class="circle-04"><img src="../assets/img/content/sec04-circle-04.png" alt="" /></li>
+                                </ul>
+                                <div class="line-wrap">
+                                    <div class="line"></div>
+                                    <img src="../assets/img/content/sec04-line.png" alt="" />
+                                </div>
+                            </div>
                         </div>
                     </section>
 
@@ -343,8 +361,8 @@
                                     <ul class="thead">
                                         <li class="th">항목</li>
                                         <li class="th">Content</li>
-                                        <li class="th">Quantity(EA)</li>
-                                        <li class="th">Volume(%)</li>
+                                        <li class="th">Quantity (EA)</li>
+                                        <li class="th">Volume (%)</li>
                                         <li class="th">설명</li>
                                     </ul>
     
@@ -361,8 +379,10 @@
                                 </div>
                             </div>
 
-                            <div class="table-wrap table-distribute mob-only" id="tokenTableMo">
-                                <!-- JS로 내용이 추가됨 -->
+                            <div class="table-wrap table-distribute mo-only" id="tokenTableMo">
+                                <ul class="table-list">
+                                    <!-- JS로 내용이 추가됨 -->
+                                </ul>
                             </div>
                         </div>
                     </section>
@@ -435,7 +455,7 @@
                 <!-- 푸터 영역 -->
                 <div class="footer">
                     <div class="inner">
-                        <div class="flex-between flex-center">
+                        <div class="util-wrap">
                             <div class="logo"><span class="blind">weto</span></div>
                             <ul class="util-menu">
                                 <li><a href="#!">개인정보보호정책</a></li>
@@ -461,7 +481,7 @@
                 { category: '프라이빗 세일', content: 'Private Sale', quantity: '20,000,000', volume: '2%', desc: '비공개 판매' },
                 { category: '프리세일', content: 'Presale', quantity: '80,000,000', volume: '8%', desc: '공개 판매' },
                 { category: '생태계 지원', content: 'Ecosystem', quantity: '300,000,000', volume: '20%', desc: '생태계 싸이클을 생성하기 위한 자산 배분' },
-                { category: '파트너/프로모션 자산', content: 'Partnership/Promotion', quantity: '50,000,000', volume: '5%', desc: '생태계 조성을 위한 파트너 및 마케팅 프로모션' },
+                { category: '파트너/프로모션 자산', content: 'Partnership / Promotion', quantity: '50,000,000', volume: '5%', desc: '생태계 조성을 위한 파트너 및 마케팅 프로모션' },
                 { category: '시장 안정성을 위한 자산', content: 'Market Stability', quantity: '100,000,000', volume: '10%', desc: '시장 안정성을 유지하기 위한 배분' },
                 { category: '개발 자산', content: 'Development', quantity: '10,000,000', volume: '1%', desc: '회사 개발 자산 배분' },
                 { category: '팀 배분', content: 'Team Rewards', quantity: '100,000,000', volume: '10%', desc: '어드바이저, 팀배분' },
@@ -469,9 +489,10 @@
             ];
 
             const $tablePc = document.querySelector('.table-distribute.pc-only .tbody');
-            const $tableMob = document.querySelector('.table-distribute.mob-only');
+            const $tableMo = document.querySelector('.table-distribute.mo-only .table-list');
 
             let $htmlPc = '';
+            let $htmlMo = '';
             data.forEach((e, i) => {
                 $htmlPc += `
                 <ul>
@@ -483,8 +504,22 @@
                 </ul>
               `;
             });
+            data.forEach((e, i) => {
+                $htmlMo += `
+                <li class="item">
+                    <p class="tit">
+                        <strong>${e.category}</strong>
+                        <small>${e.content}</small>
+                    </p>
+                    <p class="desc">Quantity(EA): ${e.quantity} (${e.volume})</p>
+                    <p class="desc">${e.desc}</p>
+                </li>
+              `;
+            });
 
             $tablePc.innerHTML = $htmlPc;
+            $tableMo.innerHTML = $htmlMo;
         </script>
     </body>
 </html>
+

@@ -68,7 +68,7 @@ img{width: 100%;}
 .txt-al-right{text-align: right !important;}
 
 .pc-only{display: block !important;}
-.mob-only{display: none !important;}
+.mo-only{display: none !important;}
 
 .flex{display: flex;}
 .flex-end{@include flex('', 'flex-end !important');}
@@ -79,9 +79,9 @@ img{width: 100%;}
 .bold{font-weight: 700 !important;}
 
 
-@media all and (max-width:720px){
-    .pc_only{display: none;}
-    .mo_only{display: block;}
+@media (max-width:750px){
+    .pc-only{display: none !important;}
+    .mo-only{display: block !important;}
   
       /* space */
       $position: (t:top, b:bottom, r:right, l: left);
