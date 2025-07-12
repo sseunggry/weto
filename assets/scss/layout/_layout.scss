@@ -2,26 +2,15 @@
 @import "../util";
 
 /* layout */
-body{background-color: #141435; color: #fff;}
-// .wrap{}
-// .contents{}
+body{background-color: #141435; color: #fff; font-size: 14px;}
 
 .inner{margin: 0 auto; padding: 0 30px; max-width: calc(1280px + 60px);}
 
-
-
-
-
-
-
-@media (max-width: 1440px) {
-}
-
-@media (max-width: 1280px) {
-}
-
-@media (max-width: 980px) {
-}
-
 @media (max-width: 750px) {
+
+}
+
+@media (max-width: 375px) {
+    body{font-size: 3.73vw;}
+    .inner{padding: 0 8.00vw; max-width: calc(341.33vw + 16.00vw);}
 }
