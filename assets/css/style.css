@@ -2101,6 +2101,7 @@ body {
 
 .sec-kv .txt-box .txt-wrap .tit {
   font-size: 54px;
+  text-transform: uppercase;
 }
 
 .sec-kv .txt-box .txt-wrap .tit strong {
@@ -2110,6 +2111,7 @@ body {
 .sec-kv .txt-box .txt-wrap .desc {
   margin-top: 40px;
   font-size: 24px;
+  text-transform: uppercase;
 }
 
 .sec-kv .txt-box .btn-wrap {
@@ -2206,6 +2208,7 @@ body {
 .sec-04 .process .first {
   top: 31.12%;
   left: 3.55%;
+  width: 27.62%;
 }
 
 .sec-04 .process .second {
@@ -2216,6 +2219,13 @@ body {
 .sec-04 .process .third {
   top: 0;
   right: 0;
+  width: 35.76%;
+}
+
+.sec-04 .process .third .desc {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
 }
 
 .sec-04 .process .line-wrap {
@@ -2698,7 +2708,9 @@ body {
   }
   .sec-01 .desc {
     margin-top: 18px;
-    padding: 0 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
     line-height: 1.6;
   }
   .sec-01 .img-wrap {
@@ -2798,6 +2810,13 @@ body {
   .sec-04 .process .first {
     display: flex;
     flex-direction: column;
+    width: 100%;
+  }
+  .sec-04 .process .third {
+    width: 100%;
+  }
+  .sec-04 .process .third .desc {
+    width: 100%;
   }
   .sec-04 .process .first .desc {
     margin-top: 0;
@@ -3009,6 +3028,9 @@ body {
     margin-top: 4.27vw;
     font-size: 3.73vw;
   }
+  .sec-kv .txt-box .txt-wrap .desc br {
+    display: none;
+  }
   .sec-kv .txt-box .btn-wrap {
     margin-top: 10.67vw;
   }
@@ -3030,9 +3052,12 @@ body {
   .sec-01 .tit {
     font-size: 7.47vw;
   }
+  .sec-01 .tit br {
+    display: none;
+  }
   .sec-01 .desc {
     margin-top: 4.8vw;
-    padding: 0 5.33vw;
+    width: 100%;
   }
   .sec-01 .img-wrap img {
     height: 94.13vw;

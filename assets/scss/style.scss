@@ -80,12 +80,11 @@ $ico-url: "../img/icon";
 .sec-kv{height: 830px; @include bg('content/seckv-visual.png', $size: auto 100%);}
 .sec-kv .inner{display: flex; align-items: center; justify-content: center; height: 100%;}
 .sec-kv .txt-box{margin-top: 120px; margin-left: 90px; text-align: center;}
-.sec-kv .txt-box .txt-wrap .tit{font-size: 54px;}
+.sec-kv .txt-box .txt-wrap .tit{font-size: 54px; text-transform: uppercase;}
 .sec-kv .txt-box .txt-wrap .tit strong{font-weight: 700;}
-.sec-kv .txt-box .txt-wrap .desc{margin-top: 40px; font-size: 24px;}
+.sec-kv .txt-box .txt-wrap .desc{margin-top: 40px; font-size: 24px; text-transform: uppercase;}
 .sec-kv .txt-box .btn-wrap{display: flex; justify-content: center; margin-top: 40px;}
 .sec-kv .txt-box .btn-wrap .btn{display: flex; align-items: center; justify-content: center; width: 150px; height: 50px; font-size: 16px; font-weight: 700; border-radius: 30px;}
-//.sec-kv .txt-box .btn-wrap .btn.primary{background-color: #216EF3;}
 .sec-kv .txt-box .btn-wrap .btn.line{border: 1px solid #fff;}
 .sec-kv .txt-box .btn-wrap .btn.line:hover{background-color: #216EF3; border-color: #216EF3;}
 .sec-kv .txt-box .btn-wrap .btn + .btn{margin-left: 14px;}
@@ -113,9 +112,10 @@ $ico-url: "../img/icon";
 
 .sec-04 .process{position: relative; margin: 0 auto; max-width: 1068px;}
 .sec-04 .process > li:not(.line-wrap) {position: absolute;}
-.sec-04 .process .first{top: 31.12%; left: 3.55%;}
+.sec-04 .process .first{top: 31.12%; left: 3.55%; width: 27.62%;}
 .sec-04 .process .second{top: 19%; left: 37.82%;}
-.sec-04 .process .third{top: 0; right: 0;}
+.sec-04 .process .third{top: 0; right: 0; width: 35.76%;}
+.sec-04 .process .third .desc{margin-left: auto; margin-right: auto; width: 60%;}
 .sec-04 .process .line-wrap{position: relative; z-index: -2;}
 
 .sec-04 .process .first .circle{width: 140px; height: 140px; background-color: #BAD1F8;}
@@ -253,7 +253,7 @@ $ico-url: "../img/icon";
     .sec-01 .txt-wrap{padding-right: 0; text-align: center;}
     .sec-01 .sub-tit{margin-bottom: 0; font-size: 14px;}
     .sec-01 .tit{font-size: 28px;}
-    .sec-01 .desc{margin-top: 18px; padding: 0 20px; line-height: 1.6;}
+    .sec-01 .desc{margin-top: 18px; margin-left: auto; margin-right: auto; width: 80%; line-height: 1.6;}
     .sec-01 .img-wrap{position: initial; display: flex; align-items: center; justify-content: center; width: 100%;}
     .sec-01 .img-wrap img{width: auto; height: 353px;}
 
@@ -292,7 +292,10 @@ $ico-url: "../img/icon";
 
     .sec-04 .process{max-width: 320px;}
     .sec-04 .process > li:not(.line-wrap) {position: initial;}
-    .sec-04 .process .first{display: flex; flex-direction: column;}
+    .sec-04 .process .first{display: flex; flex-direction: column; width: 100%;}
+    .sec-04 .process .third{width: 100%;}
+    .sec-04 .process .third .desc{width: 100%;}
+
     .sec-04 .process .first .desc{margin-top: 0; margin-bottom: 16px; order: -1;}
     .sec-04 .process .first .circle{width: 140px; height: 140px;}
     .sec-04 .process .first .circle .tit{font-size: 20px;}
@@ -371,6 +374,7 @@ $ico-url: "../img/icon";
     .sec-kv .txt-box{margin-top: 53.33vw;}
     .sec-kv .txt-box .txt-wrap .tit{font-size: 9.07vw;}
     .sec-kv .txt-box .txt-wrap .desc{margin-top: 4.27vw; font-size: 3.73vw;}
+    .sec-kv .txt-box .txt-wrap .desc br{display: none;}
     .sec-kv .txt-box .btn-wrap{margin-top: 10.67vw;}
     .sec-kv .txt-box .btn-wrap .btn{width: 40.00vw; height: 13.33vw; font-size: 4.27vw; border-radius: 8.00vw;}
     .sec-kv .txt-box .btn-wrap .btn.line{border-width: 0.27vw;}
@@ -378,7 +382,8 @@ $ico-url: "../img/icon";
 
     .sec-01 .sub-tit{font-size: 3.73vw;}
     .sec-01 .tit{font-size: 7.47vw;}
-    .sec-01 .desc{margin-top: 4.80vw; padding: 0 5.33vw;}
+    .sec-01 .tit br{display: none;}
+    .sec-01 .desc{margin-top: 4.80vw; width: 100%;}
     .sec-01 .img-wrap img{height: 94.13vw;}
 
     .sec-04 .process{max-width: 85.33vw;}
