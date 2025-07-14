@@ -28,7 +28,7 @@
 
 @media (max-width: 750px) {
     .list-box .item[data-aos^=fade][data-aos^=fade].aos-animate{
-        @for $i from 1 through 4 {
+        @for $i from 1 through 5 {
             &:nth-child(#{$i}){transition-delay: #{0.05*$i}s;}
         }
     }

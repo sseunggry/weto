@@ -8,11 +8,16 @@ $ico-url: "../img/icon";
 
 .wrap{word-break: keep-all;}
 
-.sec-tit .tit{margin-bottom: 50px; font-size: 42px; font-weight: 700; text-align: center;}
+.sec-tit{margin-bottom: 50px;text-align: center;}
+.sec-tit .sub-tit{margin-bottom: 4px; font-size: 24px; font-weight: 700;}
+.sec-tit .tit{font-size: 42px; font-weight: 700;}
+.sec-tit .tit ~ .desc{margin-top: 16px;}
 
 .notice-list{font-size: 14px;}
 .notice-list > li{position: relative; padding-left: 20px;}
 .notice-list > li::before{content: ''; position: absolute; top: 8px; left: 8px; display: block; width: 4px; height: 4px; border-radius: 50%; background-color: #fff;}
+.notice-txt{position: relative; padding-left: 20px; font-size: 14px;}
+.notice-txt::before{content: ''; position: absolute; top: 8px; left: 8px; display: block; width: 4px; height: 4px; border-radius: 50%; background-color: #fff;}
 
 .list-box{display: flex; gap: 20px;}
 .list-box .item{padding: 30px 30px 40px; flex: 1; border-radius: 30px; background: linear-gradient(180deg,rgba(15, 20, 53, 1) 0%, rgba(15, 47, 104, 1) 100%);}
@@ -20,6 +25,7 @@ $ico-url: "../img/icon";
 .list-box .item .num{display: inline-block; margin-bottom: 12px; font-size: 16px; font-weight: 700; color: #216EF3;}
 .list-box .item .tit{font-size: 24px; font-weight: 700;}
 .list-box .item .desc{margin-top: 12px; font-size: 16px;}
+.list-box .item .notice-list{margin-top: 20px;}
 
 .list-box.column{flex-wrap: wrap;}
 .list-box.column .item{width: calc(50% - 10px); flex: none;}
@@ -74,6 +80,19 @@ $ico-url: "../img/icon";
             background-image: url('#{$ico-url}/ico-coin.png');
         }
     }
+
+    &-graph{
+        display: block;
+        margin: 0 auto 4px;
+        width: 80px;
+        height: 80px;
+
+        &::before{
+            width: 100%;
+            height: 100%;
+            background-image: url('#{$ico-url}/ico-graph.png');
+        }
+    }
 }
 
 // section
@@ -102,7 +121,6 @@ $ico-url: "../img/icon";
 
 // 참여 방식 및 리워드
 .sec-03{padding: 130px 0 150px;}
-.sec-03 .list-box .item .notice-list{margin-top: 20px;}
 
 // 토큰 작동 구조  
 .sec-04{padding: 130px 0 140px;}
@@ -206,11 +224,27 @@ $ico-url: "../img/icon";
 .sec-07 .roadmap-list .item .desc-list li{margin-top: 4px;}
 .sec-07 .roadmap-list .item .desc-list li:first-child{margin-top: 0;}
 
+//실시간 매출 연동 시스템
+.sec-08{padding: 80px 0 150px;}
+.sec-08 .list-box .item .num{display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; font-size: 24px; color: #fff; border-radius: 50%; background-color: #216EF3;}
+.sec-08 .list-box .item .sub-tit{margin-top: 14px; font-size: 18px; font-weight: 700;}
+
+.sec-09{padding: 135px 0 245px;}
+
+.sec-10{padding: 132px 0 174px;}
+.sec-10 .info-box{display: flex; align-items: center; gap: 40px;}
+.sec-10 .info-box .img-wrap{flex-shrink: 0; width: 36.5%;}
+.sec-10 .info-box .txt-list{width: 100%;}
+.sec-10 .info-box .txt-list > li + li{margin-top: 50px;}
+.sec-10 .info-box .txt-list .tit{margin-bottom: 20px; font-size: 24px; font-weight: 700;}
+.sec-10 .info-box .txt-list .sub-tit{margin-top: 20px; font-size: 16px; font-weight: 600;}
+.sec-10 .info-box .txt-list .notice-txt{margin-top: 4px;}
+
 // banner
-.sec-08{position: relative; padding: 50px 0 120px; }
-.sec-08 .banner{padding: 0 60px; font-size: 42px; text-align: center; word-break: keep-all;}
-.sec-08 .banner::before{content: ''; display: inline-block; margin: 0 auto; width: 240px; height: 240px; @include bg('icon/ico-coin.png', $size: 100% auto);}
-.sec-08::after{content: ''; position: absolute; bottom: 0; left: 0; z-index: -1; display: block; width: 100%; height: 100%; background: linear-gradient(0deg,rgba(33, 110, 243, 1) 0, rgba(15, 20, 53, 0) 70%);}
+.sec-11{position: relative; padding: 50px 0 120px; }
+.sec-11 .banner{padding: 0 60px; font-size: 42px; text-align: center; word-break: keep-all;}
+.sec-11 .banner::before{content: ''; display: inline-block; margin: 0 auto; width: 240px; height: 240px; @include bg('icon/ico-coin.png', $size: 100% auto);}
+.sec-11::after{content: ''; position: absolute; bottom: 0; left: 0; z-index: -1; display: block; width: 100%; height: 100%; background: linear-gradient(0deg,rgba(33, 110, 243, 1) 0, rgba(15, 20, 53, 0) 70%);}
 
 
 @media (max-width: 1400px) {
@@ -237,7 +271,9 @@ $ico-url: "../img/icon";
 
 @media (max-width: 1000px) {
     section + section{margin-top: 80px;}
-    .sec-tit .tit{margin-bottom: 40px; font-size: 28px;}
+    .sec-tit{margin-bottom: 40px;}
+    .sec-tit .sub-tit{margin-bottom: 4px; font-size: 18px;}
+    .sec-tit .tit{font-size: 28px;}
 
     .list-box{flex-wrap: wrap;}
     .list-box .item{flex: none; width: calc(50% - 20px);}
@@ -260,7 +296,6 @@ $ico-url: "../img/icon";
     .sec-02{padding: 0;}
 
     .sec-03{padding: 0;}
-    .sec-03 .list-box .item .notice-list{margin-top: 20px;}
 
     .sec-04{padding: 0;}
 
@@ -279,9 +314,17 @@ $ico-url: "../img/icon";
     .sec-07 .roadmap-list .item{margin-top: 20px; width: 100%;}
     .sec-07 .roadmap-list .item::after{display: none;}
 
-    .sec-08{padding: 0 0 90px;}
-    .sec-08 .banner{padding: 0 30px; font-size: 28px;}
-    .sec-08 .banner::before{width: 190px; height: 190px;}
+    .sec-08{padding: 0;}
+
+    .sec-09{padding: 0;}
+
+    .sec-10{padding: 0;}
+    .sec-10 .info-box{flex-direction: column; gap: 40px;}
+    .sec-10 .info-box .img-wrap{width: 100%;}
+
+    .sec-11{padding: 0 0 90px;}
+    .sec-11 .banner{padding: 0 30px; font-size: 28px;}
+    .sec-11 .banner::before{width: 190px; height: 190px;}
 }
 
 @media (max-width: 750px) {
@@ -327,11 +370,16 @@ $ico-url: "../img/icon";
 
 @media (max-width: 375px) {
     section + section{margin-top: 21.33vw;}
-    .sec-tit .tit{margin-bottom: 10.67vw; font-size: 7.47vw;}
+    .sec-tit{margin-bottom: 10.67vw;}
+    .sec-tit .sub-tit{margin-bottom: 1.07vw; font-size: 4.80vw;}
+    .sec-tit .tit{font-size: 7.47vw;}
+    .sec-tit .tit ~ .desc{margin-top: 4.27vw;}
 
     .notice-list{font-size: 3.73vw;}
     .notice-list > li{padding-left: 5.33vw;}
     .notice-list > li::before{top: 2.13vw; left: 2.13vw; width: 1.07vw; height: 1.07vw;}
+    .notice-txt{padding-left: 5.33vw; font-size: 3.73vw;}
+    .notice-txt::before{top: 2.13vw; left: 2.13vw; width: 1.07vw; height: 1.07vw;}
 
     .list-box{flex-direction: column; gap: 5.33vw;}
     .list-box .item{padding: 8.00vw 8.00vw 10.67vw; border-radius: 8.00vw;}
@@ -339,6 +387,7 @@ $ico-url: "../img/icon";
     .list-box .item .num{margin-bottom: 3.20vw; font-size: 4.27vw;}
     .list-box .item .tit{font-size: 6.40vw;}
     .list-box .item .desc{margin-top: 3.20vw; font-size: 4.27vw;}
+    .list-box .item .notice-list{margin-top: 5.33vw;}
 
     .ico{
         @for $i from 1 through 4 {
@@ -426,7 +475,16 @@ $ico-url: "../img/icon";
     .sec-07 .roadmap-list .item .desc-list{margin-top: 3.20vw; font-size: 4.27vw;}
     .sec-07 .roadmap-list .item .desc-list li{margin-top: 1.07vw;}
 
-    .sec-08{padding: 0 0 24.00vw;}
-    .sec-08 .banner{padding: 0 8.00vw; font-size: 7.47vw;}
-    .sec-08 .banner::before{width: 50.67vw; height: 50.67vw;}
+    .sec-08 .list-box .item .num{width: 13.33vw; height: 13.33vw; font-size: 6.40vw;}
+    .sec-08 .list-box .item .sub-tit{margin-top: 3.73vw; font-size: 4.80vw;}
+
+    .sec-10 .info-box{gap: 10.67vw;}
+    .sec-10 .info-box .txt-list > li + li{margin-top: 13.33vw;}
+    .sec-10 .info-box .txt-list .tit{margin-bottom: 5.33vw; font-size: 6.40vw;}
+    .sec-10 .info-box .txt-list .sub-tit{margin-top: 5.33vw; font-size: 4.27vw;}
+    .sec-10 .info-box .txt-list .notice-txt{margin-top: 1.07vw;}
+
+    .sec-11{padding: 0 0 24.00vw;}
+    .sec-11 .banner{padding: 0 8.00vw; font-size: 7.47vw;}
+    .sec-11 .banner::before{width: 50.67vw; height: 50.67vw;}
 }
