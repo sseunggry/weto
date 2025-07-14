@@ -1605,6 +1605,14 @@ img {
   display: none;
 }
 
+.header .lang .select option {
+  color: #000;
+}
+
+.header .lang .select option:checked {
+  color: #216EF3;
+}
+
 @media (max-width: 750px) {
   .header .nav-wrap {
     position: fixed;

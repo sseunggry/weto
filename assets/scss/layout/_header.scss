@@ -13,6 +13,8 @@
 .header .lang{margin-left: auto;}
 .header .lang .select{padding-right: 20px; @include bg('icon/ico-arrow-down.png', center right,16px auto); -webkit-appearance:none; -moz-appearance:none; appearance: none;}
 .header .lang .select::-ms-expand{display: none;}
+.header .lang .select option{color: #000;}
+.header .lang .select option:checked{color: #216EF3;}
 
 @media (max-width: 750px) {
     .header .nav-wrap{position: fixed; top: 0; left: 0; flex-direction: column; padding: 40px 30px; width: 100%; height: 100vh; z-index: 1; transform: translateX(100%); transition: transform 0.5s; opacity: 0; visibility: hidden;}
