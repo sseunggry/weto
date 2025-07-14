@@ -1866,6 +1866,9 @@ body {
 .list-box .item[data-aos^=fade][data-aos^=fade].aos-animate:nth-child(4) {
   transition-delay: 0.4s;
 }
+.list-box .item[data-aos^=fade][data-aos^=fade].aos-animate:nth-child(5) {
+  transition-delay: 0.5s;
+}
 
 .graph-wrap .img-list li[data-aos^=fade][data-aos^=fade].aos-animate:nth-child(1) {
   transition-delay: 0.1s;
