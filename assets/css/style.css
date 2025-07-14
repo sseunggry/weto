@@ -1647,6 +1647,7 @@ img {
     transform: translateX(0);
     opacity: 1;
     visibility: visible;
+    overflow-y: auto;
   }
   .header.open .nav-wrap::before {
     transform: translateX(0);
