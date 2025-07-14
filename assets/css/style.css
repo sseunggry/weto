@@ -1775,6 +1775,7 @@ img {
 .footer .info {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 8px;
   margin-top: 16px;
 }
@@ -1784,7 +1785,7 @@ img {
 }
 
 .footer .copyright {
-  margin-top: 74px;
+  margin-top: 20px;
   line-height: 1.7;
   text-align: center;
 }
@@ -1801,9 +1802,6 @@ img {
   .footer .info li {
     width: 100%;
     text-align: center;
-  }
-  .footer .copyright {
-    margin-top: 20px;
   }
 }
 @media (max-width: 375px) {
@@ -1824,9 +1822,6 @@ img {
   .footer .info {
     gap: 2.13vw;
     margin-top: 4.27vw;
-  }
-  .footer .info li {
-    text-align: left;
   }
   .footer .copyright {
     margin-top: 5.33vw;
