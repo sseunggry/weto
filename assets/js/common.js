@@ -23,4 +23,15 @@ $(function () {
 
         window.location.href = targetUrl;
     });
+
+    setFullHeight();
+
+    $(window).on('resize orientationchange', function () {
+        setFullHeight();
+    });
 });
+
+function setFullHeight() {
+    let innerHeight = window.innerHeight;
+    $('.header .nav-wrap').css('height', innerHeight + 'px');
+}
