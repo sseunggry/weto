@@ -2,6 +2,7 @@
 @import "../util";
 
 /* header */
+.header{position: fixed; left: 0; top: 0; width: 100%; z-index: 9999;}
 .header .inner{display: flex; align-items: center; padding: 0 20px; height: 60px;}
 .header .logo{flex-shrink: 0; margin-right: 48px; width: 97px; height: 26px; @include bg('content/logo.svg');}
 .header .btn-menu{margin-left: auto; width: 36px; height: 36px; @include bg('icon/ico-menu.png', $size: 24px auto);}
