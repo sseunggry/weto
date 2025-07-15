@@ -1540,14 +1540,6 @@ img {
 }
 
 /* header */
-.header {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: 9999;
-}
-
 .header .inner {
   display: flex;
   align-items: center;
@@ -1637,6 +1629,14 @@ img {
 }
 
 @media (max-width: 750px) {
+  .header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: #141435;
+  }
   .header .nav-wrap {
     position: fixed;
     top: 0;
