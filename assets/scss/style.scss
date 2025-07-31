@@ -120,13 +120,10 @@ $ico-url: "../img/icon";
 .sec-02{padding: 130px 0 150px;}
 
 // 참여 방식 및 리워드
-.sec-03{padding: 130px 0 150px;}
+.sec-03{position: relative; padding: 130px 0 150px;}
 
 // 토큰 작동 구조  
 .sec-04{padding: 130px 0 140px;}
-// .sec-04 .process2 {position: relative; display: flex; align-items: center; margin: 0 auto; max-width: 1068px;}
-// .sec-04 .process2 .line-wrap{margin: 0 auto;}
-// .sec-04 .process2 .img-wrap li{position: absolute; top: 0; left: 0;}
 
 .sec-04 .process{position: relative; margin: 0 auto; max-width: 1068px;}
 .sec-04 .process > li:not(.line-wrap) {position: absolute;}
@@ -184,7 +181,7 @@ $ico-url: "../img/icon";
     $tableWidths: 20%, 21%, 19%, 13.5%, 26.5%;
     $tableFootWidths: 41%, 19%, 13.5%, 26.5%;
 
-    .th{min-width: auto;}
+    .th{min-width: auto; word-break: break-all;}
     .td.small{font-size: 14px;}
     
     .thead li, .tbody li {
@@ -333,6 +330,8 @@ $ico-url: "../img/icon";
 
     .list-box.column .item{width: 100%;}
 
+    .sec-kv{margin-top: 60px;}
+
     .sec-04 .process{max-width: 320px;}
     .sec-04 .process > li:not(.line-wrap) {position: initial;}
     .sec-04 .process .first{display: flex; flex-direction: column; width: 100%;}
@@ -419,7 +418,7 @@ $ico-url: "../img/icon";
         }
     }
 
-    .sec-kv{height: 191.47vw;}
+    .sec-kv{margin-top: 16.00vw; height: 191.47vw;}
     .sec-kv .txt-box{margin-top: 53.33vw;}
     .sec-kv .txt-box .txt-wrap .tit{font-size: 9.07vw;}
     .sec-kv .txt-box .txt-wrap .desc{margin-top: 4.27vw; font-size: 3.73vw;}
@@ -487,4 +486,16 @@ $ico-url: "../img/icon";
     .sec-11{padding: 0 0 24.00vw;}
     .sec-11 .banner{padding: 0 8.00vw; font-size: 7.47vw;}
     .sec-11 .banner::before{width: 50.67vw; height: 50.67vw;}
+}
+
+// 다국어 중국어
+html[lang="zh"]{
+    * {word-break: break-all;}
+
+    .sec-06 .table-wrap.table-distribute.pc-only .td.small {word-break: break-all;}
+
+    @media (max-width: 1120px) {
+        .sec-04 .process .second .circle .tit{padding: 0;}
+
+    }
 }

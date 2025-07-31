@@ -32,6 +32,10 @@ $(function () {
 });
 
 function setFullHeight() {
-    let innerHeight = window.innerHeight;
-    $('.header .nav-wrap').css('height', innerHeight + 'px');
+    const innerWidth = window.innerWidth;
+    const innerHeight = window.innerHeight;
+    
+    if(innerWidth < 751){
+        $('.header .nav-wrap').css('height', innerHeight + 'px');
+    }
 }

@@ -1588,7 +1588,6 @@ img {
   display: flex;
   align-items: center;
   width: 100%;
-  min-height: 400px;
 }
 
 .header .nav {
@@ -1653,6 +1652,7 @@ img {
   }
   .header .nav-wrap .nav-inner {
     flex-direction: column;
+    min-height: 400px;
   }
   .header .nav-wrap::before {
     content: "";
@@ -2269,6 +2269,7 @@ body {
 }
 
 .sec-03 {
+  position: relative;
   padding: 130px 0 150px;
 }
 
@@ -2518,6 +2519,7 @@ body {
 
 .sec-06 .table-wrap.table-distribute.pc-only .th {
   min-width: auto;
+  word-break: break-all;
 }
 .sec-06 .table-wrap.table-distribute.pc-only .td.small {
   font-size: 14px;
@@ -2966,6 +2968,9 @@ body {
   .list-box.column .item {
     width: 100%;
   }
+  .sec-kv {
+    margin-top: 60px;
+  }
   .sec-04 .process {
     max-width: 320px;
   }
@@ -3203,6 +3208,7 @@ body {
     height: 21.33vw;
   }
   .sec-kv {
+    margin-top: 16vw;
     height: 191.47vw;
   }
   .sec-kv .txt-box {
@@ -3425,5 +3431,16 @@ body {
   .sec-11 .banner::before {
     width: 50.67vw;
     height: 50.67vw;
+  }
+}
+html[lang=zh] * {
+  word-break: break-all;
+}
+html[lang=zh] .sec-06 .table-wrap.table-distribute.pc-only .td.small {
+  word-break: break-all;
+}
+@media (max-width: 1120px) {
+  html[lang=zh] .sec-04 .process .second .circle .tit {
+    padding: 0;
   }
 }
